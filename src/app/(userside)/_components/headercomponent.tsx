@@ -37,10 +37,10 @@ const callsToAction = [
 
 export default function HeaderComponent() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const [isScrolled, setIsScrolled] = useState(false);
+    // const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(()=>{
-        
+
     }, []);
     return (
         <header className="header-bg">
