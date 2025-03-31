@@ -145,15 +145,22 @@ export default function HomeComponent() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-40 flex justify-center p-10" style={{ backgroundColor: "#faf9f7" }}>
-                    <div>
-                        <p className='text-4xl font-bold text-center'>Tools that make life simple</p>
-                        <p className='text-center text-3xl'>Work smarter with these great collaborative features.</p>
-                        <div className='flex justify-center'>
+                <div
+                    className="mt-40 flex justify-center p-10 bg-[#faf9f7]"
+                >
+                    <div className="max-w-5xl w-full text-center">
+                        <p className="text-4xl font-bold">Tools that make life simple</p>
+                        <p className="text-2xl mt-2">Work smarter with these great collaborative features.</p>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-10">
                             {[1, 2, 3, 4].map((item, index) => (
-                                <div key={`${item}-${index}`} className='text-center p-5'>
-                                    <img src='https://assets-cdn.reedsy.com/assets/landing/landing-v2/index/messaging-a7b34fd7df2eab012872744bcd9d96438712bc44dea4cfcf26eaccc5f6117f5d.svg' alt='image' className='flex mx-auto' />
-                                    <p className='font-bold text-xl'>Messaging & File Sharing</p>
+                                <div key={`${item}-${index}`} className="p-5 text-center">
+                                    <img
+                                        src="https://assets-cdn.reedsy.com/assets/landing/landing-v2/index/messaging-a7b34fd7df2eab012872744bcd9d96438712bc44dea4cfcf26eaccc5f6117f5d.svg"
+                                        alt="image"
+                                        className="mx-auto w-20 h-20 md:w-24 md:h-24"
+                                    />
+                                    <p className="font-bold text-lg md:text-xl mt-3">Messaging & File Sharing</p>
                                 </div>
                             ))}
                         </div>
