@@ -3,7 +3,7 @@ import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faRightFromBracket, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 
 type LoginModalProps = {
     isOpen: boolean;
@@ -12,9 +12,9 @@ type LoginModalProps = {
 
 export function LoginModal({ isOpen = false, setIsOpen }: LoginModalProps) {
     //Handling closing of model
-    function closeModal() {
-        setIsOpen(false);
-    }
+    // function closeModal() {
+    //     setIsOpen(false);
+    // }
     return (
         <>
             <Transition appear show={isOpen} as={Fragment}>
@@ -101,7 +101,7 @@ export function LoginModal({ isOpen = false, setIsOpen }: LoginModalProps) {
 
                                 {/* Footer */}
                                 <p className="text-center text-gray-600 text-sm mt-4">
-                                    Don't have an account?{" "}
+                                    Don&apos;t have an account?{" "}
                                     <a href="#" className="text-blue-600 hover:underline">
                                         Sign up
                                     </a>
