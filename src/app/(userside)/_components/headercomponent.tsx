@@ -22,6 +22,8 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
+import { LoginModal } from './logincomponent';
+
 
 const products = [
     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -38,13 +40,13 @@ const callsToAction = [
 export default function HeaderComponent() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     // const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(()=>{
+    const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
 
     }, []);
     return (
-        <header className="header-bg">
-            <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+        <header className="theme-bg">
+            <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 text-white">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span >My Ai Story</span>
@@ -67,9 +69,9 @@ export default function HeaderComponent() {
                 </div>
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
-                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
+                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
                             Product
-                            <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
+                            <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
                         </PopoverButton>
 
                         <PopoverPanel
@@ -110,25 +112,25 @@ export default function HeaderComponent() {
                         </PopoverPanel>
                     </Popover>
 
-                    <a href="#" className="text-sm/6 font-semibold text-gray-900">
+                    <a href="#" className="text-sm/6 font-semibold text-white">
                         Features
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-900">
+                    <a href="#" className="text-sm/6 font-semibold text-white">
                         Marketplace
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-900">
+                    <a href="#" className="text-sm/6 font-semibold text-white">
                         Company
                     </a>
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="text-sm/6 font-semibold text-gray-900">
+                    <button className="text-sm/6 font-semibold text-white cursor-pointer" onClick={()=>setIsOpen(true)}>
                         Log in <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    </button>
                 </div>
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                 <div className="fixed inset-0 z-10" />
-                <DialogPanel className="fixed header-bg inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <DialogPanel className="fixed theme-bg inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">My Ai Story</span>
@@ -199,6 +201,7 @@ export default function HeaderComponent() {
                     </div>
                 </DialogPanel>
             </Dialog>
+            <LoginModal isOpen={isOpen} setIsOpen={setIsOpen}/>
         </header>
     )
 }

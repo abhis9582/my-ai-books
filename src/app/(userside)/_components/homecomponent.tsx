@@ -11,13 +11,14 @@ import './style.css';
 // import required modules
 import { Navigation } from 'swiper/modules';
 import Link from 'next/link';
+import { LoginModal } from './logincomponent';
 export default function HomeComponent() {
     //Defining banner images array
     const bannerImages = [1, 2, 3, 4, 5];
     return (
         <>
             <div className='container-fluid'>
-                <div className='h-120'>
+                <div className='h-130 relative'>
                     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                         {bannerImages.map((item, index) => (
                             <SwiperSlide key={`${item}-${index}`}>
@@ -25,6 +26,7 @@ export default function HomeComponent() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                    <p className='text-4xl font-bold absolute z-10 top-50 left-10'>My Ai Stories</p>
                 </div>
                 <div className="px-4">
                     <p className="text-center font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5">
@@ -102,7 +104,7 @@ export default function HomeComponent() {
                         <div className="flex justify-center mt-10 p-4">
                             <Link
                                 href="#"
-                                className="header-bg px-6 md:px-10 py-3 md:py-4 text-lg md:text-xl rounded-2xl block text-center w-full sm:w-auto text-white font-bold"
+                                className="theme-bg px-6 md:px-10 py-3 md:py-4 text-lg md:text-xl rounded-2xl block text-center w-full sm:w-auto text-white font-bold"
                             >
                                 Browse free courses
                             </Link>
@@ -166,7 +168,7 @@ export default function HomeComponent() {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center p-10" style={{ background: "linear-gradient(135deg, #49846e, #7fb99a);" }}>
+                <div className="flex justify-center p-10" style={{ background: "linear-gradient(135deg, #49846e, #7fb99a)" }}>
                     <div>
                         <p className='text-4xl font-bold text-center'>#MadeWithMyAiStory</p>
                         <p className='text-2xl text-center'>Some of the fantastic books that we have helped prepare for publishing.</p>
