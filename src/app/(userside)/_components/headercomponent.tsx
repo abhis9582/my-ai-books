@@ -70,7 +70,7 @@ export default function HeaderComponent() {
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
                         <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-                            Product
+                            Products
                             <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
                         </PopoverButton>
 
@@ -113,13 +113,13 @@ export default function HeaderComponent() {
                     </Popover>
 
                     <a href="#" className="text-sm/6 font-semibold text-white">
-                        Features
+                        Stories
                     </a>
                     <a href="#" className="text-sm/6 font-semibold text-white">
-                        Marketplace
+                        Books
                     </a>
                     <a href="#" className="text-sm/6 font-semibold text-white">
-                        Company
+                        About us
                     </a>
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">

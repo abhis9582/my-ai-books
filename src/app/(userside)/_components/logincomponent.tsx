@@ -20,7 +20,7 @@ export function LoginModal({ isOpen = false, setIsOpen }: LoginModalProps) {
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-50" onClose={() => setIsOpen(false)}>
                     {/* Backdrop */}
-                    <div className="fixed inset-0 bg-black bg-opacity-50" />
+                    <div className="fixed inset-0 bg-black/70" />
 
                     {/* Modal Container */}
                     <div className="fixed inset-0 flex items-center justify-center p-4">
@@ -33,11 +33,11 @@ export function LoginModal({ isOpen = false, setIsOpen }: LoginModalProps) {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                         >
-                            <Dialog.Panel className="w-full max-w-md bg-white p-6 rounded-lg shadow-xl">
+                            <Dialog.Panel className="w-full max-w-md bg-white p-6 rounded-lg shadow-xl relative">
                                 {/* Close Button */}
                                 <button
                                     onClick={() => setIsOpen(false)}
-                                    className="absolute top-3 right-3 text-gray-600 hover:text-gray-900"
+                                    className="absolute top-5 right-5 cursor-pointer  text-gray-600 hover:text-gray-900"
                                 >
                                     <FontAwesomeIcon icon={faTimes} className="w-5 h-5" />
                                 </button>
