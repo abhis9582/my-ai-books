@@ -11,7 +11,6 @@ import './style.css';
 // import required modules
 import { Navigation } from 'swiper/modules';
 import Link from 'next/link';
-import { LoginModal } from './logincomponent';
 export default function HomeComponent() {
     //Defining banner images array
     const bannerImages = [1, 2, 3, 4, 5];
