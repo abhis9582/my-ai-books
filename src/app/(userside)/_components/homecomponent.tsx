@@ -17,16 +17,31 @@ export default function HomeComponent() {
     return (
         <>
             <div className='container-fluid'>
-                <div className='h-130 relative'>
+                <div className='relative h-130'>
                     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                         {bannerImages.map((item, index) => (
                             <SwiperSlide key={`${item}-${index}`}>
-                                <img src="/static/banner_image.jpg" alt="banner_image" />
+                                <img src="/static/banner_image.jpg" alt="banner_image" className="w-full h-full object-cover" />
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <p className='text-4xl font-bold absolute z-10 top-50 left-10'>My Ai Stories</p>
+
+                    {/* Centered overlay text */}
+                    <div className="absolute inset-0 flex items-center justify-center z-10">
+                        <div>
+                            <p className="text-white text-4xl md:text-6xl font-bold text-center">
+                                Read anytime, anywhere
+                            </p>
+                            <div className='flex justify-center'>
+                                <p className='text-white text-3xl font-bold text-center mt-5 w-60'>Explore our collection of thounsands of online books and start reading today.</p>
+                            </div>
+                            <div className='text-center mt-5 '>
+                                <button className='text-xl bg-green-700 px-4 py-2 rounded-2xl text-white font-bold'>Browse Books</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div className="px-4">
                     <p className="text-center font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5">
                         Assemble your team of professionals

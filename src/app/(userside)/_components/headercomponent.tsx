@@ -45,11 +45,11 @@ export default function HeaderComponent() {
 
     }, []);
     return (
-        <header className="theme-bg">
-            <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 text-white">
+        <header>
+            <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 text-black">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
-                        <span >My Ai Story</span>
+                        <span className='font-bold text-2xl'>reader</span>
                         {/* <img
               alt=""
               src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
@@ -69,9 +69,9 @@ export default function HeaderComponent() {
                 </div>
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
-                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
+                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-black">
                             Products
-                            <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
+                            <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-black" />
                         </PopoverButton>
 
                         <PopoverPanel
@@ -112,19 +112,19 @@ export default function HeaderComponent() {
                         </PopoverPanel>
                     </Popover>
 
-                    <a href="#" className="text-sm/6 font-semibold text-white">
+                    <a href="#" className="text-sm/6 font-semibold text-black">
                         Stories
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-white">
+                    <a href="#" className="text-sm/6 font-semibold text-black">
                         Books
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-white">
+                    <a href="#" className="text-sm/6 font-semibold text-black">
                         About us
                     </a>
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <button className="text-sm/6 font-semibold text-white cursor-pointer" onClick={()=>setIsOpen(true)}>
-                        Log in <span aria-hidden="true">&rarr;</span>
+                    <button className="text-sm/6 font-semibold text-white cursor-pointer bg-green-700 py-1 px-4 rounded-2xl" onClick={()=>setIsOpen(true)}>
+                        Sign in <span aria-hidden="true">&rarr;</span>
                     </button>
                 </div>
             </nav>
