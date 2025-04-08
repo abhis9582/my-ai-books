@@ -197,10 +197,10 @@ export default function HeaderComponent() {
                             </div>
                             <div className="py-6">
                                 <button
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                    className="text-sm/6 font-semibold text-white cursor-pointer bg-green-700 py-1 px-4 rounded-2xl"
                                     onClick={()=>openLoginBox()}
                                 >
-                                    Sign in
+                                    Sign in <span aria-hidden="true">&rarr;</span>
                                 </button>
                             </div>
                         </div>
