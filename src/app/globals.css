@@ -10,3 +10,8 @@
 body{
   background-color: var(--theme-bg);
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  z-index: 20;
+}

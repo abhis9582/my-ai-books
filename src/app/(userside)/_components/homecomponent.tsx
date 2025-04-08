@@ -14,6 +14,25 @@ import Link from 'next/link';
 export default function HomeComponent() {
     //Defining banner images array
     const bannerImages = [1, 2, 3, 4, 5];
+    //Defining categories array
+    const categories = [
+        {
+            id: 1,
+            name: "Fiction",
+        },
+        {
+            id: 2,
+            name: "Non-Fiction",
+        },
+        {
+            id: 3,
+            name: "Mystery",
+        },
+        {
+            id: 4,
+            name: "Romence",
+        },
+    ];
     return (
         <>
             <div className='container-fluid'>
@@ -27,18 +46,53 @@ export default function HomeComponent() {
                     </Swiper>
 
                     {/* Centered overlay text */}
-                    <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="absolute inset-0 flex items-center justify-center z-10 w-3/4 mx-auto">
                         <div>
                             <p className="text-white text-4xl md:text-6xl font-bold text-center">
                                 Read anytime, anywhere
                             </p>
-                            <div className='flex justify-center'>
-                                <p className='text-white text-3xl font-bold text-center mt-5 w-60'>Explore our collection of thounsands of online books and start reading today.</p>
+                            <div className="flex justify-center w-full px-4 sm:px-10 md:px-8 lg:px-12">
+                                <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center mt-5 w-full sm:w-1/2 md:w-2/3 lg:w-1/2">
+                                    Explore our collection of thousands of online books and start reading today.
+                                </p>
                             </div>
                             <div className='text-center mt-5 '>
                                 <button className='text-xl bg-green-700 px-4 py-2 rounded-2xl text-white font-bold'>Browse Books</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+                {/* Popular Books Section */}
+                <div className="container mx-auto px-4 my-10">
+                    <div className='flex justify-between align-middle items-center'>
+                        <p className="text-3xl md:text-4xl font-bold mb-6 text-center md:text-left p-0 m-0">
+                            Popular Books
+                        </p>
+                        <p className='cursor-pointer hover:text-green-400'>View all &gt;</p>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                        {[1, 2, 3, 4, 5].map((item, index) => (
+                            <div
+                                key={`${item}-${index}`}
+                                className="bg-amber-100 border-2 border-amber-200 rounded-2xl h-80 shadow-md hover:shadow-xl transition-shadow duration-300 p-4 flex items-center justify-center"
+                            >
+                                <span className="text-2xl font-semibold text-gray-700">
+                                    Book #{item}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Categories session */}
+                <div className='container mx-auto px-4 my-10'>
+                    <p className='text-3xl md:text-4xl font-bold mb-6 text-center md:text-left p-0 m-0'>Categories</p>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6'>
+                        {categories.map((item, index)=>(
+                            <div key={`${item.id}-${index}`} className='bg-amber-100 border-2 border-amber-200 rounded-2xl h-auto shadow-md hover:shadow-xl transition-shadow duration-300 p-4 flex items-center justify-center'>
+                                <p className=''>{item.name}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
