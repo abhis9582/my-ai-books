@@ -76,7 +76,8 @@ export default function HeaderComponent() {
 
                         <PopoverPanel
                             transition
-                            className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+                            className="absolute top-full -left-8 z-20 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in
+                            "
                         >
                             <div className="p-4">
                                 {products.map((item) => (
@@ -123,7 +124,7 @@ export default function HeaderComponent() {
                     </a>
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <button className="text-sm/6 font-semibold text-white cursor-pointer bg-green-700 py-1 px-4 rounded-2xl" onClick={()=>setIsOpen(true)}>
+                    <button className="text-sm/6 font-semibold text-white cursor-pointer bg-green-700 py-1 px-4 rounded-2xl" onClick={() => setIsOpen(true)}>
                         Sign in <span aria-hidden="true">&rarr;</span>
                     </button>
                 </div>
@@ -201,7 +202,7 @@ export default function HeaderComponent() {
                     </div>
                 </DialogPanel>
             </Dialog>
-            <LoginModal isOpen={isOpen} setIsOpen={setIsOpen}/>
+            <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </header>
     )
 }
