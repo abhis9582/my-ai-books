@@ -63,7 +63,7 @@ export default function HomeComponent() {
                     </div>
                 </div>
                 {/* Popular Books Section */}
-                <div className="container mx-auto px-4 my-10">
+                <div className="w-[80%] mx-auto px-4 my-10">
                     <div className='flex justify-between align-middle items-center'>
                         <p className="text-3xl md:text-4xl font-bold mb-6 text-center md:text-left p-0 m-0">
                             Popular Books
@@ -85,7 +85,7 @@ export default function HomeComponent() {
                 </div>
 
                 {/* Categories session */}
-                <div className='container mx-auto px-4 my-10'>
+                <div className='w-[80%] mx-auto px-4 my-10'>
                     <p className='text-3xl md:text-4xl font-bold mb-6 text-center md:text-left p-0 m-0'>Categories</p>
                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6'>
                         {categories.map((item, index)=>(
