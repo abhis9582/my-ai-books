@@ -44,6 +44,11 @@ export default function HeaderComponent() {
     useEffect(() => {
 
     }, []);
+
+    const openLoginBox = () => {
+        setMobileMenuOpen(false);
+        setIsOpen(true);
+    }
     return (
         <header>
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 text-black">
@@ -191,12 +196,12 @@ export default function HeaderComponent() {
                                 </a>
                             </div>
                             <div className="py-6">
-                                <a
-                                    href="#"
+                                <button
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                    onClick={()=>openLoginBox()}
                                 >
-                                    Log in
-                                </a>
+                                    Sign in
+                                </button>
                             </div>
                         </div>
                     </div>
