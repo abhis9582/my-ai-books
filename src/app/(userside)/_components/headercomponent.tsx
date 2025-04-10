@@ -23,6 +23,9 @@ import {
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import { LoginModal } from './logincomponent';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 const products = [
@@ -53,14 +56,14 @@ export default function HeaderComponent() {
         <header>
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 text-black">
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
+                    <Link href="#" className="-m-1.5 p-1.5">
                         <span className='font-bold text-2xl'>reader</span>
                         {/* <img
               alt=""
               src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
               className="h-8 w-auto"
             /> */}
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -69,7 +72,7 @@ export default function HeaderComponent() {
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
                     >
                         <span className="sr-only">Open main menu</span>
-                        <Bars3Icon aria-hidden="true" className="size-6" />
+                        <FontAwesomeIcon icon={faBars} aria-hidden="true" className="size-6" />
                     </button>
                 </div>
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
