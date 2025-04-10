@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function FooterComponent() {
     return (
-        <footer className="bg-gray-900 text-white py-8">
+        <footer className="bg-gray-900 text-white py-8 nj">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                     {/* Footer Logo or Branding */}
