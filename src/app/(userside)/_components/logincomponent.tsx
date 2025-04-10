@@ -3,7 +3,6 @@ import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faRightFromBracket, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dialog, Transition } from "@headlessui/react";
-import axios from "axios";
 import { Fragment, useEffect } from "react";
 
 type LoginModalProps = {
