@@ -8,7 +8,7 @@
   --button-bg: #d4a373;
 }
 
-body{
+header{
   background-color: var(--theme-bg);
 }
 

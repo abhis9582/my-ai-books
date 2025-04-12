@@ -9,7 +9,7 @@ export default function FooterComponent() {
                 <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                     {/* Footer Logo or Branding */}
                     <div className="mb-6 md:mb-0">
-                        <h2 className="text-2xl font-bold">Your Company</h2>
+                        <h2 className="text-2xl font-bold">reader</h2>
                         <p className="text-sm text-gray-400 mt-1">Empowering businesses with technology</p>
                     </div>
 

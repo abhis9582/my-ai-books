@@ -55,7 +55,7 @@ export default function HeaderComponent() {
         <header>
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 text-black">
                 <div className="flex lg:flex-1">
-                    <Link href="#" className="-m-1.5 p-1.5">
+                    <Link href="/" className="-m-1.5 p-1.5">
                         <span className='font-bold text-2xl'>reader</span>
                         {/* <img
               alt=""
@@ -74,6 +74,7 @@ export default function HeaderComponent() {
                         <FontAwesomeIcon icon={faBars} aria-hidden="true" className="size-6" />
                     </button>
                 </div>
+                <Link className='mx-5 text-black-500' href="/home">Home</Link>
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
                         <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-black">
