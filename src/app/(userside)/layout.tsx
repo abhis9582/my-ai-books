@@ -1,12 +1,12 @@
 import React from "react";
-import HeaderComponent from "./_components/headercomponent";
 import FooterComponent from "./_components/footercomponent";
+import Header from "./_components/header";
 export default function UserLayout({ children }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <>
-            <HeaderComponent />
+            <Header />
             {children}
             <FooterComponent />
         </>
